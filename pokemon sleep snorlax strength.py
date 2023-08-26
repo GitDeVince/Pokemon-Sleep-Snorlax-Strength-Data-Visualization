@@ -11,10 +11,10 @@ CB_ss = [0,4882,11090,18082,26520,36164,48700,63889,81971,101499,122474,144654,1
 TH_ss = [0,6885,15835,25817,37865,51635,69534,91221,117038,144921,174869,206538,240961,278826,320478]
 ST_ss = [0,10486,24118,39323,57673,78645,105909,138940,178262,220730,266344,314580,367010,424683,488123]
 
-GI_ss_masters = [187832,220177,253169,286821,321146,356158,391870,428296,465451,532707,601308,742056,885619,1029700,1199506,1486800,1795052,2165541,2604280,3245795]
-CB_ss_masters = [256544,291842,330670,373381,420363,472043,528891,591424,660210,735875,819107,910682,1018462,1184155,1379432,1709820,2064310,2490372,2994922,3732664]
-TH_ss_masters = [366295,416694,472133,533116,600197,673986,755154,844439,942653,1050688,1169527,1300250,1444045,1602220,1776213,1967605,2333568,2815203,3385564,4219534]
-ST_ss_masters = [557907,634669,719107,811989,914159,1026546,1150172,1286161,1435749,1600296,1781298,1980400,2199412,2440325,2705329,2996833,3317487,3670206,4058197,4706403]
+GI_ss_masters = [0.19,0.22,0.25,0.29,0.32,0.36,0.39,0.43,0.47,0.53,0.60,0.74,0.89,1.03,1.20,1.49,1.80,2.17,2.60,3.25]
+CB_ss_masters = [0.26,0.29,0.33,0.37,0.42,0.47,0.53,0.59,0.66,0.74,0.82,0.91,1.02,1.18,1.38,1.71,2.06,2.49,2.99,3.73]
+TH_ss_masters = [0.37,0.42,0.47,0.53,0.60,0.67,0.76,0.84,0.94,1.05,1.17,1.30,1.44,1.60,1.78,1.97,2.33,2.82,3.39,4.22]
+ST_ss_masters = [0.56,0.63,0.72,0.81,0.91,1.03,1.15,1.29,1.44,1.60,1.78,1.98,2.20,2.44,2.71,3.00,3.32,3.67,4.06,4.71]
 
 def basic_ultra():
 
@@ -40,19 +40,18 @@ def masters():
     plt.style.use('seaborn')
 
     fig, ax = plt.subplots()
-    ax.yaxis.get_major_formatter().set_scientific(False)
-    ax.yaxis.get_major_formatter().set_useOffset(False)
+   
 
     master_rank = ['Master 1', 'Master 2', 'Master 3', 'Master 4', 'Master 5', 'Master 6', 'Master 7', 'Master 8', 'Master 9', 'Master 10', 'Master 11', 'Master 12', 'Master 13', 'Master 14', 'Master 15', 'Master 16', 'Master 17', 'Master 18', 'Master 19', 'Master 20']
-    ax.plot(master_rank, GI_ss_masters, linewidth = 3, c ='green')
-    ax.plot(master_rank, CB_ss_masters, linewidth = 3, c ='blue')
-    ax.plot(master_rank, TH_ss_masters, linewidth = 3, c ='brown')
-    ax.plot(master_rank, ST_ss_masters, linewidth = 3, c ='purple')
+    ax.plot(master_rank, GI_ss_masters, linewidth = 3, c ='green', label = "Greengrass Isle" )
+    ax.plot(master_rank, CB_ss_masters, linewidth = 3, c ='blue', label = "Cyan Beach")
+    ax.plot(master_rank, TH_ss_masters, linewidth = 3, c ='brown', label = "Taupe Hollow")
+    ax.plot(master_rank, ST_ss_masters, linewidth = 3, c ='purple', label = "Snowdrop Tundra")
 
-    ax.set_title("Master 1 to Master 20 Snorlax Strength Requirement", fontsize = 24)
+    ax.set_title("Master 1 to Master 20 Snorlax Strength Requirement (in millions)", fontsize = 24)
     ax.set_xlabel("Ranks", fontsize = 14)
     ax.set_ylabel("Snorlax Strength Number", fontsize = 14)
-    plt.legend( (GI_ss_masters, CB_ss_masters, TH_ss_masters, ST_ss_masters), ("Greengrass Isle", "Cyan Beach", "Taupe Hollow", "Snowdrop Tundra"))
+    leg = ax.legend(loc ="upper left")
     plt.show()
 
 while True:
