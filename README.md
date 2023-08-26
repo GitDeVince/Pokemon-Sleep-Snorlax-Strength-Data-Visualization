@@ -1,7 +1,8 @@
 # Pokemon-Sleep-Snorlax-Strength-Data-Visualization
 ![Figure_1](https://github.com/GitDeVince/Pokemon-Sleep-Snorlax-Strength-Data-Visualization/assets/138000255/6c5c22d4-51df-4181-adef-bc7e9366d325)
 
-![Figure_2](https://github.com/GitDeVince/Pokemon-Sleep-Snorlax-Strength-Data-Visualization/assets/138000255/db3dcd13-a034-4a0c-a3ef-a1b93877928e)
+
+![Figure_2](https://github.com/GitDeVince/Pokemon-Sleep-Snorlax-Strength-Data-Visualization/assets/138000255/61f8575f-de50-4684-9acd-1fa38a5821e0)
 
 
 
